@@ -12,15 +12,19 @@ import "fmt"
 func main() {
 
 	fmt.Printf("Hello world!")
+
 }
 
 type FunctionDef struct{
 	name string
 	returnType string
 	arguments []string
-}
+};
 
-func GoFunctionSearch(args...string) (string,[]string){
+func GoFunctionSearch(args...string) (string,[]FunctionDef){
 
-	return "",[""]
+	myfunction := FunctionDef{name:"abc",returnType :"string"}
+	funcdefs := make([]FunctionDef,1)
+	funcdefs[0] = myfunction
+	return myfunction.name,funcdefs
 }
